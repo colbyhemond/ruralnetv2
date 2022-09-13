@@ -15,6 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Environment Variables
+        env:
+          VITE_MONGODB_URI: ${{ secrets.VITE_MONGODB_URI }}
+          VITE_MAPQUEST_KEY: ${{ secrets.VITE_MAPQUEST_KEY }}
 
       - name: Set up Node.js version
         uses: actions/setup-node@v1
